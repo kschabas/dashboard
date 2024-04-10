@@ -3,7 +3,7 @@ body {
 }
 
 #container {
-  height: 100vh;
+  /*height: 100vh;*/
   display: grid;
   grid-template-columns: 1fr 4fr;
   grid-template-rows: 1fr 4fr;
@@ -35,10 +35,6 @@ body {
   display: grid;
   grid-template-rows: 1fr 2fr;
   padding: 10px;
-}
-
-#content {
-  background-color: lightgray;
 }
 
 ul {
@@ -116,6 +112,9 @@ ul {
 
 #right_corner_logo {
   height: 15px;
+  background-color: darkorange;
+  border-radius: 100%;
+  padding: 1px;
 }
 
 #user_greeting {
@@ -123,6 +122,16 @@ ul {
   justify-content: left;
   align-items: center;
 }
+
+#user_logo {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  background-color: darkorange;
+  border-radius: 100%;
+  padding: 5px;
+}
+
 
 #user_greeting_text {
   display: grid;
@@ -155,10 +164,181 @@ button {
   height: 20px;
   font-size: 10px;
   border-style: none;
+  font-weight: bold;
 }
 
 #header_buttons {
   display: flex;
   justify-content: space-around;
   align-items: center;
+}
+
+#content {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  grid-template-rows: 1fr;
+  background-color: lightgray;
+}
+
+#content_projects {
+  display: grid;
+  grid-template-rows: 20px 1fr;
+}
+
+#content_project_cards
+{
+  grid-column: 1 /2;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  padding: 10px;
+  padding-left: 0px;
+  padding-top: 0px;
+  align-items: stretch;
+}
+
+#content_other {
+  grid-column: 2 / 3;
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+}
+
+.project_card {
+  width: auto;
+  height: auto;
+  margin: 10px;
+  padding: 5px;
+  background-color: white;
+  align-items: top;
+  justify-content: center;
+  border-left-color: orange;
+  border-left-width: 5px;
+  border-left-style: solid;
+  border-radius: 5px;
+  display: grid;
+  grid-template-rows: 20px 1fr 25px;
+}
+
+.card_content {
+  font-size: 9px;
+  padding: 5px;
+  padding-top: 0px;
+}
+
+.announcement_item_content {
+  font-size: 7px;
+  padding: 5px;
+  padding-top: 0px;
+}
+
+.card_title, .announcement_item_title {
+  font-weight: bold;
+  padding: 5px;
+  font-size: 11px;
+}
+
+.project_title{
+  padding: 10px;
+  padding-left: 0px;
+  padding-bottom: 0px;
+  font-size: small;
+  font-weight: bold;
+  height: 20px;
+}
+
+#content_projects .project_title {
+  padding-left: 10px;
+}
+
+.card_image_bar {
+  display: flex;
+  justify-content: right;
+  padding: 2px;
+}
+.card_image_bar img{
+  padding: 3px;
+}
+
+#announcements_grid {
+  display: grid;
+  grid-template-rows: repeat(3,1fr);
+  background-color: white;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+
+#trending_grid {
+  display: grid;
+  grid-template-rows: repeat(4,1fr);
+  background-color: white;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+
+#content_announcements, #content_trending {
+  display: grid;
+  grid-template-rows: 20px 1fr;
+  padding: 10px;
+  padding-top: 0px;
+}
+
+#content_trending {
+  padding-bottom: 20px;
+}
+
+.annoucements_item {
+  border-bottom-style: solid;
+  border-width: 1px;
+  border-bottom-color: rgb(230, 229, 229);
+  margin: 10px;
+  margin-top: 5px;
+  margin-bottom: 0px;
+  padding-bottom: 5px;
+}
+
+#trending_grid {
+  display: grid;
+  grid-template-rows: repeat(4,1fr);
+}
+
+.trending_row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.trending_text {
+  flex: 1 1 0;
+  display: grid;
+  grid-template-rows: 1fr 2fr;
+  align-items: center;
+}
+.trending_handle {
+  justify-self: left;
+  font-size: 10px;
+}
+
+.trending_name {
+  font-size: 9px;
+  color: gray;
+}
+.trending_row img {
+  margin: 10px;
+  padding: 2px;
+  border-radius: 10px;
+}
+
+#cat_logo {
+  background-color: green;
+}
+
+#dog_logo {
+  background-color: lightblue;
+}
+
+#bird_logo {
+  background-color: yellow;
+}
+
+#ladybug_logo {
+  background-color: salmon;
 }
